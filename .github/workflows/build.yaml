@@ -1,0 +1,12 @@
+name: "File synced workflow"
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: run build
+        run: echo hey it worked
