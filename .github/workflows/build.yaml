@@ -1,6 +1,7 @@
 name: "File synced workflow"
 on:
   workflow_dispatch:
+  push:
 permissions:
   contents: read
 jobs:
@@ -9,4 +10,4 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: run build
-        run: echo hey it worked
+        run: echo hey it worked again
